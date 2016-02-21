@@ -37,3 +37,18 @@ BOARD_CUSTOM_BOOTIMG := true
 TARGET_RECOVERY_FSTAB := device/cubot/x9/recovery/recovery.fstab
 #TARGET_RECOVERY_DEVICE_DIRS += device/cubot/x9/
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+#Opengl 
+BOARD_EGL_CFG := device/cubot/x9/configs/egl.cfg
+USE_OPENGL_RENDERER := true
+
+#SELinux
+BOARD_SEPOLICY_DIRS := \
+       device/cubot/x9/sepolicy
+
+BOARD_SEPOLICY_UNION := \
+       device.te \
+       app.te \
+       system.te \
+       netd.te \
+       file_contexts
