@@ -16,11 +16,9 @@ lib/librilmtkmd2.so
 lib/libmmprofile.so
 lib/libbwc.so
 lib/libmdloggerrecycle.so
-lib/libmtk_mali_user.so
 lib/libnvram.so
 lib/libmjc.so
 lib/libcam_hwutils.so
-lib/libion_mtk.so
 lib/libshowlogo.so
 lib/lib3a.so
 lib/libcam.utils.so
@@ -58,13 +56,11 @@ lib/libjtranscode.so
 lib/libJpgEncPipe.so
 lib/libcorkscrew.so
 lib/libblisrc32.so
-lib/libcamera_client_mtk.so
 lib/libmpo.so
 lib/liba3m.so
 lib/libnvram_sec.so
 lib/libcameracustom.so
 lib/libbessound_mtk.so
-lib/libcurl.so
 lib/mtk-ril.so
 lib/libMtkVideoTranscoder.so
 lib/libClearMotionFW.so
@@ -77,18 +73,14 @@ lib/libhwm.so
 lib/libmtklimiter.so
 lib/libMtkOmxVenc.so
 lib/libcam.exif.so
-lib/libui_ext.so
 lib/libaudiocompensationfilter.so
 lib/libcam_utils.so
 lib/libcam.client.so
-lib/libadpcm.so
 lib/libMJCjni.so
 lib/libcam.paramsmgr.so
-lib/libmtk_mmutils.so
 lib/libaudiodcrflt.so
 lib/libSwJpgCodec.so
 lib/libMtkOmxCore.so
-lib/libcam.utils.sensorlistener.so
 lib/libdrmmtkwhitelist.so
 lib/libfile_op.so
 lib/libmnl.so
@@ -105,8 +97,6 @@ lib/libcam_mmp.so
 lib/libMtkOmxVdec.so
 lib/libja3m.so
 lib/libion.so
-lib/libmtknfc.so
-lib/libgralloc_extra.so
 lib/libnativecheck-jni.so
 lib/libvp9dec_sa.ca7.so
 lib/hw/gps.default.so
@@ -119,7 +109,6 @@ lib/hw/hwcomposer.mt6592.so
 lib/hw/sensors.default.so
 lib/hw/local_time.default.so
 lib/libJpgDecPipe.so
-lib/libgui_ext.so
 lib/libaudiosetting.so
 lib/libBnMtkCodec.so
 lib/libmtcloader.so
@@ -140,7 +129,6 @@ lib/libvp8dec_sa.ca7.so
 bin/drvbd
 bin/mdlogger
 bin/thermald
-bin/wifi2agps
 bin/akmd8963
 bin/akmd8975
 bin/wmt_loader
@@ -180,10 +168,7 @@ bin/ipod
 bin/memsicd3416x
 bin/6620_wmt_concurrency
 etc/mtk_omx_core.cfg
-etc/nfcse.cfg
 etc/fmr/mt6627_fm_cust.cfg
-etc/nfc.cfg
-etc/nfcee_access.xml
 etc/firmware/S_ANDRO_SFL.ini
 etc/firmware/mt6572_82_patch_e1_1_hdr.bin
 etc/firmware/WIFI_RAM_CODE_E6
@@ -208,5 +193,4 @@ etc/wifi/wpa_supplicant.conf
 etc/wifi/wpa_supplicant_overlay.conf
 etc/wifi/p2p_supplicant_overlay.conf
 xbin/BGW
-xbin/nfcstackp
 xbin/mnld
