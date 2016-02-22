@@ -38,6 +38,13 @@ TARGET_RECOVERY_FSTAB := device/cubot/x9/recovery/recovery.fstab
 #TARGET_RECOVERY_DEVICE_DIRS += device/cubot/x9/
 BOARD_HAS_NO_SELECT_BUTTON := true
 
+# TWRP
+RECOVERY_VARIANT=twrp #comment/uncomment this to enable twrp build
+RECOVERY_SDCARD_ON_DATA := true #emulated internal sd card on /data/media
+RECOVERY_GRAPHICS_USE_LINELENGHT := true
+TW_NO_REBOOT_BOOTLOADER := true # disable boot in download mode
+DEVICE_RESOLUTION=720x1280 # screen resolution	
+
 #Opengl 
 BOARD_EGL_CFG := device/cubot/x9/configs/egl.cfg
 USE_OPENGL_RENDERER := true
