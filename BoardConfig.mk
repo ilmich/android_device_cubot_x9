@@ -27,6 +27,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 902889472
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 TARGET_PREBUILT_KERNEL := device/cubot/x9/kernel
+#disabled support for f2fs
+TARGET_USERIMAGES_USE_F2FS :=
+TARGET_USERIMAGES_USE_EXT4 := true
 
 #custom bootimg script
 BOARD_CUSTOM_BOOTIMG_MK := device/cubot/x9/bootimg.mk
@@ -35,17 +38,23 @@ BOARD_CUSTOM_BOOTIMG := true
 
 # Cyanogenmod Recovery
 TARGET_RECOVERY_FSTAB := device/cubot/x9/recovery/recovery.fstab
-#TARGET_RECOVERY_DEVICE_DIRS += device/cubot/x9/
 BOARD_HAS_NO_SELECT_BUTTON := true
-
+	
 # TWRP
-RECOVERY_VARIANT=twrp #comment/uncomment this to enable twrp build
-RECOVERY_SDCARD_ON_DATA := true #emulated internal sd card on /data/media
+#WARNING!!!! Don't use RECOVERY_VARIANT because with this build seems to ignore configurations
+#RECOVERY_VARIANT=twrp
+#emulated internal sd card on /data/media
+RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGHT := true
-TW_NO_REBOOT_BOOTLOADER := true # disable boot in download mode
-DEVICE_RESOLUTION=720x1280 # screen resolution	
+TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone1/temp
+# disable boot in download mode
+TW_NO_REBOOT_BOOTLOADER := true
+TW_NEVER_UNMOUNT_SYSTEM := true
+TW_ALWAYS_RMRF := true
+# screen resolution
+DEVICE_RESOLUTION := 720x1280
 
-#Opengl 
+#Opengl
 BOARD_EGL_CFG := device/cubot/x9/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 
