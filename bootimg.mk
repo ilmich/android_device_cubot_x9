@@ -28,15 +28,15 @@ $(INSTALLED_KERNEL_TARGET).mtk: $(INSTALLED_KERNEL_TARGET).mtk.header
 	cat $(INSTALLED_KERNEL_TARGET) > $@
 	
 INSTALLED_RAMDISK_TARGET := $(BUILT_RAMDISK_TARGET)
-$(INSTALLED_RAMDISK_TARGET): $(MKBOOTFS) $(INTERNAL_RAMDISK_FILES) | $(MINIGZIP)
-	$(call pretty,"Target ram disk: $@")
-	cmp -s device/cubot/x9/rootdir/custom_init out/target/product/x9/root/init; \
-	RETVAL=$$?; \
-	if [ $$RETVAL -eq 1 ]; then \
-		mv out/target/product/x9/root/init out/target/product/x9/root/init2; \
-		cp device/cubot/x9/rootdir/custom_init out/target/product/x9/root/init; \
-	fi
-	$(hide) $(MKBOOTFS) $(TARGET_ROOT_OUT) | $(MINIGZIP) > $@
+#$(INSTALLED_RAMDISK_TARGET): $(MKBOOTFS) $(INTERNAL_RAMDISK_FILES) | $(MINIGZIP)
+#	$(call pretty,"Target ram disk: $@")
+#	cmp -s device/cubot/x9/rootdir/custom_init out/target/product/x9/root/init; \
+#	RETVAL=$$?; \
+#	if [ $$RETVAL -eq 1 ]; then \
+#		mv out/target/product/x9/root/init out/target/product/x9/root/init2; \
+#		cp device/cubot/x9/rootdir/custom_init out/target/product/x9/root/init; \
+#	fi
+#	$(hide) $(MKBOOTFS) $(TARGET_ROOT_OUT) | $(MINIGZIP) > $@
 
 $(INSTALLED_RAMDISK_TARGET).mtk.header: $(INSTALLED_RAMDISK_TARGET)
 	size=$$($(call get-file-size,$(INSTALLED_RAMDISK_TARGET))); \
