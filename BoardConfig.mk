@@ -49,7 +49,6 @@ RECOVERY_GRAPHICS_USE_LINELENGHT := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone1/temp
 # disable boot in download mode
 TW_NO_REBOOT_BOOTLOADER := true
-TW_ALWAYS_RMRF := true
 # screen resolution
 DEVICE_RESOLUTION := 720x1280
 
