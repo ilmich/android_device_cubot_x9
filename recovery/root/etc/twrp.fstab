@@ -6,4 +6,5 @@
 /recovery	emmc	/dev/recovery
 /sdcard2	vfat	/dev/block/mmcblk1p1	flags=display="Micro SDCard";storage;wipeingui;removable;backup=0
 /nvram		emmc	/dev/nvram		flags=display="IMEI/NVRAM";backup=1;backupname="IMEI/NVRAM"
+/logo		emmc	/dev/logo		flags=display="Boot Logo";backup=1;backupname="Boot Logo"
 /usb-otg	vfat	/dev/block/sda1		flags=display="USB-OTG";storage;removable;backup=0
