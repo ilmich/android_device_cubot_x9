@@ -1,4 +1,4 @@
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
@@ -17,6 +17,12 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_x9
-PRODUCT_DEVICE := x9
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
+# Touchpad binary config
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/etc/firmware/gt9xx_config.bin:recovery/root/etc/firmware/gt9xx_config.bin \
+	$(LOCAL_PATH)/rootdir/etc/firmware/gt9xx_config.bin:root/etc/firmware/gt9xx_config.bin
+

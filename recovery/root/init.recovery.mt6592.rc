@@ -1,0 +1,4 @@
+on boot
+	#fix touchpad
+	# !!! WARNING !!! this can break touchpad if used on different phone
+	copy /etc/firmware/gt9xx_config.bin /proc/gt9xx_config
