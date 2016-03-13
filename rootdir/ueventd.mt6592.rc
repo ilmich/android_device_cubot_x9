@@ -1,0 +1,80 @@
+#change partition permission
+/dev/preloader            0640   root       system
+/dev/bootimg              0640   root       system
+/dev/recovery             0640   root       system
+/dev/sec_ro               0640   root       system
+/dev/kb                   0660   root       system
+/dev/dkb                  0660   root       system
+/dev/seccfg               0660   root       system
+/dev/pro_info             0660	 root	    system
+/dev/otp 		  0660	 root	    nvram
+/dev/nvram 		   0660	 root	    system
+/dev/misc		   0660	 root	    system
+/dev/block/mmcblk0	   0660	 root	    system
+/dev/block/mmcblk0boot0	   0660	 root	    system
+
+# change misc-sd to 0660 root system
+/dev/misc-sd              0660   root       system
+
+# add the read write right of ttyUSB*
+/dev/bus/usb/*     	  0660   root       usb
+/dev/ttyUSB0              0660   radio      radio
+/dev/ttyUSB1              0660   radio      radio
+/dev/ttyUSB2              0660   radio      radio
+/dev/ttyUSB3              0660   radio      radio
+/dev/ttyUSB4              0660   radio      radio
+
+# Anyone can read the logs, but if they're not in the "logs"
+# group, then they'll only see log entries for their UID.
+/dev/xLog                 0600   root       root
+/dev/log/ksystem          0600   root       log
+
+# these should not be world writable
+/dev/diag                 0660   radio      radio
+# mtk specific
+/dev/ccci*                0660   ccci       ccci
+/dev/ttyC*                0660   ccci       ccci
+/sys/kernel/ccci          modem_info   0644   ccci       ccci
+/sys/kernel/ccci          md1_postfix  0644   ccci       ccci
+/sys/kernel/ccci          md2_postfix  0644   ccci       ccci
+/dev/eemcs*               0660   ccci       ccci
+
+# SGX device node
+/dev/pvrsrvkm             0666   root       root
+/dev/pvr_sync             0666   root       root
+
+#NFC device
+/dev/msr3110              0666   root       root
+/dev/mt6605               0660   nfc        radio
+
+#GPS
+/dev/gps	0660	gps	system
+
+#GPIO
+/dev/mtgpio	0600	radio	root
+
+#MTK BTIF driver
+/dev/btif 0600  system system
+
+#FOR VIA MODEM
+/dev/ttySDIO*	0660	radio	sdcard_rw
+/dev/ttyRB*     0660    radio   radio
+
+# Mali node
+/dev/mali                0666    system graphics
+
+#MTK In-House TEE
+/dev/trustzone            0660   root       drmrpc
+/dev/tzmem                0660   root       drmrpc
+
+#touch
+/dev/touch              0660   root       system
+/dev/hotknot             0660    root system
+
+# sysfs properties
+/sys/devices/platform/leds-mt65xx/leds/green   delay_on      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/green   delay_off      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/red   delay_on      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/red   delay_off      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/blue   delay_on      0664  system   system
+/sys/devices/platform/leds-mt65xx/leds/blue   delay_off      0664  system   system

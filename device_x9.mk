@@ -26,3 +26,11 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/etc/firmware/gt9xx_config.bin:recovery/root/etc/firmware/gt9xx_config.bin \
 	$(LOCAL_PATH)/rootdir/etc/firmware/gt9xx_config.bin:root/etc/firmware/gt9xx_config.bin
 
+# Ramdisk
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/rootdir/fstab.mt6592:root/fstab.mt6592 \
+	$(LOCAL_PATH)/rootdir/ueventd.mt6592.rc:root/ueventd.mt6592.rc \
+	$(LOCAL_PATH)/rootdir/init.mt6592.rc:root/init.mt6592.rc \
+	$(LOCAL_PATH)/rootdir/init.charging.rc:root/init.charging.rc \
+	$(LOCAL_PATH)/rootdir/init.usb.rc:root/init.usb.rc \
+	$(LOCAL_PATH)/rootdir/init:root/init
