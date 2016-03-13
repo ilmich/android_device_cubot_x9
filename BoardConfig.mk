@@ -47,6 +47,8 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGHT := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/class/thermal/thermal_zone1/temp
+# use hardware info to generate device id
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 # disable boot in download mode
 TW_NO_REBOOT_BOOTLOADER := true
 # screen resolution
